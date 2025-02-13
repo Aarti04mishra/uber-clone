@@ -6,7 +6,7 @@ let io;
 
 function initializeSocket(server) {
     io = socketIo(server, {
-        origin: 'https://uber-clone-1-ej9h.onrender.com', // Only allow your frontend domain
+        origin: '*', 
         methods: ['GET', 'POST']
     });
 
