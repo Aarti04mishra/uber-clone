@@ -10,7 +10,7 @@ const mapRoutes=require("./routes/maps.router");
 const rideRoutes=require("./routes/ride.router");
 
 const corsOptions = {
-    origin: 'https://uber-clone-1-ej9h.onrender.com', // Frontend URL
+    origin: '*', // Frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
     credentials: true, // Allow cookies (if needed)
 };
