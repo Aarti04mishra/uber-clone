@@ -9,7 +9,13 @@ const captainRoutes=require("./routes/captain.router");
 const mapRoutes=require("./routes/maps.router");
 const rideRoutes=require("./routes/ride.router");
 
-app.use(cors())
+const corsOptions = {
+    origin: 'https://uber-clone-1-ej9h.onrender.com', // Frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+    credentials: true, // Allow cookies (if needed)
+};
+
+app.use(cors(corsOptions))
 connectToDB();
 app.use(express.json());
 app.use(express.urlencoded({
